@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Weather forecast</h1>
+    </header>
+    <main>
+      <form>
+        <p class="searchLocation">
+          <label for="location">Search</label>
+          <input type="text" name="location" id="location" required />
+        </p>
+        <fieldset>
+          <legend>Pls select your preferred unitgroup</legend>
+          <div>
+            <input type="radio" value="metric" name="unit" id="unit" />
+            <label for="unit">metric</label>
+          </div>
+          <div>
+            <input type="radio" value="us" name="unit" id="unit" />
+            <label for="unit">us</label>
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+      <section class="loader">
+        <div class="loading-spinner" style="display: none">Loading...</div>
+      </section>
+      <section class="current-section">
+        <article class="current-weather"></article>
+      </section>
+      <section class="forecast-section"></section>
+      <section class="error-section">
+        <dialog class="error-dialog">
+          <p class="message"></p>
+          <form method="dialog">
+            <button>OK</button>
+          </form>
+        </dialog>
+      </section>
+    </main>
+  </body>
 </html>
